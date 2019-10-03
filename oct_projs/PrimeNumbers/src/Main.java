@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static float Primes(float n, float k) {
-		return ((n % k) != 0 ? Primes(n, k-1) : Primes(n-1, n-1));
+	public static int Primes(int n, int k) {
+		return ((k == 1) ? n : (n % k) != 0 ? Primes(n, k-1) : (n % k) == 0 ? (n*1000+k) : 1);
 	}
 	
 	
@@ -13,8 +13,10 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		Scanner s = new Scanner(System.in);
-		
-		System.out.println(Primes(s.nextFloat(), s.nextFloat()-1));
+		int num = s.nextInt();
+		System.out.println("The primes are: " + Primes(num, (num-1)));
+		//System.out.print(8/0);
+		System.out.println(num + " " + (num-1));
 	}
 
 }

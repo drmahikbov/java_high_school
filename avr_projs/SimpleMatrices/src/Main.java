@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Main {
 
-	
+	// Multiply a matrix by a number
 	public static int[][] matrixCalc(int k, int[][] matrix) {
 		
 		for (int lignes = 0; lignes < matrix.length; lignes++) {
@@ -14,7 +14,8 @@ public class Main {
 		return matrix;
 	}
 	
-	public static int[][] addMatrices(int[][] m1, int[][] m2, int[][] m3) {
+	// This function returns the sum of 3 given matrices
+	public static int[][] addThreeMatrices(int[][] m1, int[][] m2, int[][] m3) {
 		int[][] supermatrix = new int[2][3];
 		
 		for (int i = 0; i < m3.length; i++) {
@@ -31,7 +32,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+	
+	// First define the matrices and their coefficients
 	int[][] matrix1 = { {1, 2, -1},
 						{2, 1, 1} };
 	int coef1 = 4;
@@ -44,13 +46,8 @@ public class Main {
 						{-1, 3, 2} };
 	int coef3 = -2;
 	
-//	System.out.println(Arrays.deepToString(matrixCalc(coef1, matrix1)));
-//	System.out.println(Arrays.deepToString(matrixCalc(coef2, matrix2)));
-//	System.out.println(Arrays.deepToString(matrixCalc(coef3, matrix3)));
-	System.out.println();
-	
-	
-	System.out.println(Arrays.deepToString(addMatrices(matrixCalc(coef1, matrix1), matrixCalc(coef2, matrix2), matrixCalc(coef3, matrix3))));
+	// Call the function that returns the sum of the multiplied matrices given as arguments
+	System.out.println(Arrays.deepToString(addThreeMatrices(matrixCalc(coef1, matrix1), matrixCalc(coef2, matrix2), matrixCalc(coef3, matrix3))));
 
 	
 	
